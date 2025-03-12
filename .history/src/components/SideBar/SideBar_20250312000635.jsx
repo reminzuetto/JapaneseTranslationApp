@@ -12,7 +12,7 @@ const SidebarItem = ({ src, text }) => (
   </li>
 );
 
-const SideBar = ({ isOpen, setIsOpen }) => {
+const SideBar = () => {
   const menuItems = [
     { src: "/src/assets/SearchIcon.png", text: "Search" },
     { src: "/src/assets/TranslateIcon.png", text: "Translate" },

@@ -12,7 +12,7 @@ const SidebarItem = ({ src, text }) => (
   </li>
 );
 
-const SideBar = ({ isOpen, setIsOpen }) => {
+const SideBar = () => {
   const menuItems = [
     { src: "/src/assets/SearchIcon.png", text: "Search" },
     { src: "/src/assets/TranslateIcon.png", text: "Translate" },
@@ -22,13 +22,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
   ];
 
   return (
-    <nav
-      className={`w-20 h-screen fixed z-10 bg-blue-600 transition-all duration-200 hover:w-64 group ${
-        isOpen ? "w-64" : "w-20"
-      }`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
+    <nav className="w-20 h-screen fixed z-10 bg-blue-600 transition-all duration-200 hover:w-64 group">
       <ul className="flex flex-col items-center space-y-2">
         <li className="w-full text-center py-4 bg-blue-700 font-bold uppercase text-white text-2xl">
           <a className="flex items-center justify-center space-x-4" href="">

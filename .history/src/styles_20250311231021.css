@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex justify-center items-center flex-col min-h-screen bg-gray-100;
+}
+
+h1 {
+  @apply font-bold text-xl;
+}
+
+button {
+  @apply border border-red-500 bg-red-500 text-white font-bold py-2 px-6 rounded-full transition-transform duration-300;
+}
+
+button:active {
+  @apply scale-95;
+}
+
+.container {
+  @apply bg-white rounded-lg shadow-lg relative overflow-hidden w-[768px] max-w-full min-h-[480px] transition-all duration-500;
+}
+
+.overlay-container {
+  @apply absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-500;
+}
+
+.overlay {
+  @apply bg-gradient-to-r from-red-500 to-pink-500 text-white absolute left-[-100%] h-full w-[200%] transition-transform duration-500;
+}
+
+.right-panel-active .overlay {
+  @apply translate-x-1/2;
+}
+
+.overlay-panel {
+  @apply absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 transition-transform duration-500;
+}
+
+.overlay-left {
+  @apply -translate-x-1/4;
+}
+
+.right-panel-active .overlay-left {
+  @apply translate-x-0;
+}
+
+.overlay-right {
+  @apply translate-x-0;
+}
+
+.right-panel-active .overlay-right {
+  @apply translate-x-1/4;
+}

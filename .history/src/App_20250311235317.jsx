@@ -1,26 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar"; // Import Sidebar
 import Home from "./pages/Home";
-import Sidebar from "./components/SideBar/SideBar";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/Signup";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
     <Router>
       <div className="flex">
-        {/* Sidebar */}
-        <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
+        {/* Sidebar luôn hiển thị bên trái */}
+        <Sidebar />
 
-        {/* Nội dung chính - tự động đẩy sang phải khi Sidebar mở */}
-        <div
-          className={`flex-1 transition-all duration-300 ${
-            isSidebarOpen ? "ml-64" : "ml-20"
-          }`}
-        >
+        {/* Nội dung chính, thêm padding-left để tránh bị đè */}
+        <div className="flex-1 pl-20">
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

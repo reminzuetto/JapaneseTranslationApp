@@ -23,7 +23,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
 
   return (
     <nav
-      className={`w-20 h-screen fixed z-10 bg-blue-600 transition-all duration-200 hover:w-64 group ${
+      className={`fixed left-0 top-0 h-full bg-blue-600 transition-all duration-300 ${
         isOpen ? "w-64" : "w-20"
       }`}
       onMouseEnter={() => setIsOpen(true)}
