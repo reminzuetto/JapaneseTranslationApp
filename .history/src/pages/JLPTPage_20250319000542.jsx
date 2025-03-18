@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from "react";
-import JLPTTestItem from "/src/components/JLPTPage/JLPTTestItem";
+import JLPTTestItem from "./JLPTTestItem";
 
 const JLPTPage = () => {
   const [tests, setTests] = useState([]);
 
   useEffect(() => {
-    fetch("japanese_test.json") // Để file json trong thư mục public
+    fetch("/japanese_test.json")
       .then((response) => response.json())
-      .then((data) => setTests(data.tests))
+      .then((data) => setTests(data))
       .catch((error) => console.error("Error loading test data:", error));
   }, []);
 
-  const handleStartTest = (testId) => {
-    console.log(`Bắt đầu bài kiểm tra với ID: ${testId}`);
-    // Có thể điều hướng hoặc thay đổi state ở đây nếu cần
-  };
-
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
-      {/* Thanh chọn loại kỳ thi */}
       <div className="flex space-x-4 mb-4">
         <button className="px-4 py-2 bg-yellow-400 text-white font-bold rounded">
           JLPT
@@ -28,7 +22,6 @@ const JLPTPage = () => {
         </button>
       </div>
 
-      {/* Thông tin bài thi */}
       <div className="flex justify-between items-center bg-white p-4 rounded shadow">
         <h2 className="text-lg font-bold">Thông tin bài thi N5</h2>
         <div className="text-sm">
@@ -40,15 +33,9 @@ const JLPTPage = () => {
         </div>
       </div>
 
-      {/* Danh sách bài kiểm tra */}
-      <div className="mt-4 bg-white p-4 rounded shadow space-y-2">
+      <div className="mt-4 bg-white p-4 rounded shadow">
         {tests.map((test, index) => (
-          <JLPTTestItem
-            key={test.id}
-            test={test}
-            index={index + 1}
-            onStart={handleStartTest}
-          />
+          <JLPTTestItem key={test.id} test={test} index={index + 1} />
         ))}
       </div>
     </div>

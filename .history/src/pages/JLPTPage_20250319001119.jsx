@@ -7,7 +7,7 @@ const JLPTPage = () => {
   useEffect(() => {
     fetch("japanese_test.json") // Để file json trong thư mục public
       .then((response) => response.json())
-      .then((data) => setTests(data.tests))
+      .then((data) => setTests(data))
       .catch((error) => console.error("Error loading test data:", error));
   }, []);
 
@@ -41,7 +41,7 @@ const JLPTPage = () => {
       </div>
 
       {/* Danh sách bài kiểm tra */}
-      <div className="mt-4 bg-white p-4 rounded shadow space-y-2">
+      {/* <div className="mt-4 bg-white p-4 rounded shadow space-y-2">
         {tests.map((test, index) => (
           <JLPTTestItem
             key={test.id}
@@ -51,7 +51,7 @@ const JLPTPage = () => {
           />
         ))}
       </div>
-    </div>
+    </div> */}
   );
 };
 

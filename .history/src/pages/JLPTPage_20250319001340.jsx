@@ -7,7 +7,7 @@ const JLPTPage = () => {
   useEffect(() => {
     fetch("japanese_test.json") // Để file json trong thư mục public
       .then((response) => response.json())
-      .then((data) => setTests(data.tests))
+      .then((data) => setTests(data))
       .catch((error) => console.error("Error loading test data:", error));
   }, []);
 

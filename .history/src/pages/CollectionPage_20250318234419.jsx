@@ -16,7 +16,7 @@ const CollectionPage = () => {
   return (
     <div className="p-10">
       <div className="grid grid-cols-4 gap-8">
-        <button className="bg-blue-500 rounded-lg flex justify-center items-center text-white hover:bg-blue-600 cursor-pointer shadow-lg p-3  h-[100px] ">
+        <button className="bg-blue-500 rounded-lg flex justify-center items-center text-white hover:bg-blue-600 cursor-pointer shadow-lg p-3">
           <FontAwesomeIcon icon={faPlus} className="mr-2" />
           New collection
         </button>

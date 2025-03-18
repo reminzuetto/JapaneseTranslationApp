@@ -1,0 +1,239 @@
+{
+  "collections": [
+    {
+      "collectionID": "001",
+      "collectionName": "Trường học",
+      "createdDate": "2025-03-18",
+      "wordCount": 3,
+      "words": [
+        {
+          "word": "学校",
+          "pronounce": "がっこう",
+          "relevants": ["小学校", "中学校"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Trường", "Ngôi Trường", "Mái Trường"],
+              "example_jp": "私は学校へ行きます",
+              "example_vi": "Tôi đi học"
+            }
+          ]
+        },
+        {
+          "word": "先生",
+          "pronounce": "せんせい",
+          "relevants": ["教師", "講師"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Giáo viên", "Thầy cô"],
+              "example_jp": "先生に質問しました",
+              "example_vi": "Tôi đã hỏi thầy cô một câu hỏi"
+            }
+          ]
+        },
+        {
+          "word": "学生",
+          "pronounce": "がくせい",
+          "relevants": ["生徒", "大学生"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Học sinh", "Sinh viên"],
+              "example_jp": "彼は大学の学生です",
+              "example_vi": "Anh ấy là sinh viên đại học"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "002",
+      "collectionName": "Gia đình",
+      "createdDate": "2025-03-17",
+      "wordCount": 3,
+      "words": [
+        {
+          "word": "父",
+          "pronounce": "ちち",
+          "relevants": ["お父さん", "パパ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Bố", "Cha"],
+              "example_jp": "私の父は医者です",
+              "example_vi": "Bố tôi là bác sĩ"
+            }
+          ]
+        },
+        {
+          "word": "母",
+          "pronounce": "はは",
+          "relevants": ["お母さん", "ママ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mẹ", "Má"],
+              "example_jp": "母は料理が上手です",
+              "example_vi": "Mẹ tôi nấu ăn rất giỏi"
+            }
+          ]
+        },
+        {
+          "word": "兄弟",
+          "pronounce": "きょうだい",
+          "relevants": ["姉妹", "兄", "弟"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Anh chị em"],
+              "example_jp": "私は三人の兄弟がいます",
+              "example_vi": "Tôi có ba anh chị em"
+            }
+          ]
+        },
+        {
+          "collectionID": "004",
+          "collectionName": "Món ăn",
+          "createdDate": "2025-03-18",
+          "wordCount": 3,
+          "words": [
+            {
+              "word": "寿司",
+              "pronounce": "すし",
+              "relevants": ["刺身", "巻き寿司"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Sushi"],
+                  "example_jp": "寿司を食べたいです",
+                  "example_vi": "Tôi muốn ăn sushi"
+                }
+              ]
+            },
+            {
+              "word": "ラーメン",
+              "pronounce": "らーめん",
+              "relevants": ["うどん", "そば"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Mì Ramen"],
+                  "example_jp": "このラーメンはとても美味しいです",
+                  "example_vi": "Tô mì ramen này rất ngon"
+                }
+              ]
+            },
+            {
+              "word": "天ぷら",
+              "pronounce": "てんぷら",
+              "relevants": ["唐揚げ", "フライ"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Tempura (món chiên Nhật)"],
+                  "example_jp": "天ぷらはサクサクしています",
+                  "example_vi": "Tempura rất giòn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "collectionID": "005",
+          "collectionName": "Thời tiết",
+          "createdDate": "2025-03-18",
+          "wordCount": 3,
+          "words": [
+            {
+              "word": "晴れ",
+              "pronounce": "はれ",
+              "relevants": ["快晴", "曇り"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Trời nắng"],
+                  "example_jp": "今日は晴れです",
+                  "example_vi": "Hôm nay trời nắng"
+                }
+              ]
+            },
+            {
+              "word": "雨",
+              "pronounce": "あめ",
+              "relevants": ["小雨", "豪雨"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Mưa"],
+                  "example_jp": "雨が降っています",
+                  "example_vi": "Trời đang mưa"
+                }
+              ]
+            },
+            {
+              "word": "雪",
+              "pronounce": "ゆき",
+              "relevants": ["吹雪", "霜"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Tuyết"],
+                  "example_jp": "冬には雪が降ります",
+                  "example_vi": "Mùa đông có tuyết rơi"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "collectionID": "006",
+          "collectionName": "Giao thông",
+          "createdDate": "2025-03-18",
+          "wordCount": 3,
+          "words": [
+            {
+              "word": "電車",
+              "pronounce": "でんしゃ",
+              "relevants": ["地下鉄", "新幹線"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Tàu điện"],
+                  "example_jp": "私は電車で通勤します",
+                  "example_vi": "Tôi đi làm bằng tàu điện"
+                }
+              ]
+            },
+            {
+              "word": "車",
+              "pronounce": "くるま",
+              "relevants": ["自動車", "バス"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Xe hơi"],
+                  "example_jp": "新しい車を買いました",
+                  "example_vi": "Tôi đã mua một chiếc xe hơi mới"
+                }
+              ]
+            },
+            {
+              "word": "飛行機",
+              "pronounce": "ひこうき",
+              "relevants": ["ヘリコプター", "グライダー"],
+              "word_uses": [
+                {
+                  "word_type": "Noun",
+                  "word_means": ["Máy bay"],
+                  "example_jp": "飛行機で旅行します",
+                  "example_vi": "Tôi đi du lịch bằng máy bay"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

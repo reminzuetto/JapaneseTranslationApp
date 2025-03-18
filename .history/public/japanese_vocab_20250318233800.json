@@ -1,0 +1,139 @@
+{
+  "collections": [
+    {
+      "collectionID": "001",
+      "name": "Trường học",
+      "words": [
+        {
+          "word": "学校",
+          "pronounce": "がっこう",
+          "relevants": ["小学校", "中学校"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Trường", "Ngôi Trường", "Mái Trường"],
+              "example_jp": "私は学校へ行きます",
+              "example_vi": "Tôi đi học"
+            }
+          ]
+        },
+        {
+          "word": "先生",
+          "pronounce": "せんせい",
+          "relevants": ["教師", "講師"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Giáo viên", "Thầy cô"],
+              "example_jp": "先生に質問しました",
+              "example_vi": "Tôi đã hỏi thầy cô một câu hỏi"
+            }
+          ]
+        },
+        {
+          "word": "学生",
+          "pronounce": "がくせい",
+          "relevants": ["生徒", "大学生"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Học sinh", "Sinh viên"],
+              "example_jp": "彼は大学の学生です",
+              "example_vi": "Anh ấy là sinh viên đại học"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "002",
+      "name": "Gia đình",
+      "words": [
+        {
+          "word": "父",
+          "pronounce": "ちち",
+          "relevants": ["お父さん", "パパ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Bố", "Cha"],
+              "example_jp": "私の父は医者です",
+              "example_vi": "Bố tôi là bác sĩ"
+            }
+          ]
+        },
+        {
+          "word": "母",
+          "pronounce": "はは",
+          "relevants": ["お母さん", "ママ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mẹ", "Má"],
+              "example_jp": "母は料理が上手です",
+              "example_vi": "Mẹ tôi nấu ăn rất giỏi"
+            }
+          ]
+        },
+        {
+          "word": "兄弟",
+          "pronounce": "きょうだい",
+          "relevants": ["姉妹", "兄", "弟"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Anh chị em"],
+              "example_jp": "私は三人の兄弟がいます",
+              "example_vi": "Tôi có ba anh chị em"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "003",
+      "name": "Động vật",
+      "words": [
+        {
+          "word": "犬",
+          "pronounce": "いぬ",
+          "relevants": ["ワンちゃん", "子犬"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chó"],
+              "example_jp": "私の犬はかわいいです",
+              "example_vi": "Con chó của tôi rất dễ thương"
+            }
+          ]
+        },
+        {
+          "word": "猫",
+          "pronounce": "ねこ",
+          "relevants": ["子猫", "ペット"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mèo"],
+              "example_jp": "猫がソファで寝ています",
+              "example_vi": "Con mèo đang ngủ trên ghế sofa"
+            }
+          ]
+        },
+        {
+          "word": "鳥",
+          "pronounce": "とり",
+          "relevants": ["小鳥", "鷲"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chim"],
+              "example_jp": "庭に鳥が飛んでいます",
+              "example_vi": "Có một con chim đang bay trong vườn"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
