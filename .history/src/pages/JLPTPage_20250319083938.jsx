@@ -56,7 +56,7 @@ const JLPTPage = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col justify-center items-center bg-white p-4 rounded gap-2 italic">
+        <div className="flex flex-col justify-start items-center bg-white p-4 rounded shadow gap-2 italic">
           <h2 className="text-lg font-bold text-blue-500 underline">
             Thông tin bài thi N5
           </h2>

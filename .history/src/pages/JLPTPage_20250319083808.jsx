@@ -46,7 +46,7 @@ const JLPTPage = () => {
         </div>
       </div>
       <div className="flex">
-        <div className="mt-4 bg-white p-4 space-y-2 w-full min-w-[300px]">
+        <div className="mt-4 bg-white p-4 rounded shadow space-y-2 w-full min-w-[300px]">
           {tests.map((test, index) => (
             <JLPTTestItem
               key={test.id}
@@ -56,11 +56,11 @@ const JLPTPage = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col justify-center items-center bg-white p-4 rounded gap-2 italic">
+        <div className="flex flex-col justify-start items-center bg-white p-4 rounded shadow gap-2 italic">
           <h2 className="text-lg font-bold text-blue-500 underline">
             Thông tin bài thi N5
           </h2>
-          <div className="text-sm flex flex-col justify-center items-center gap-2 min-w-[250px]">
+          <div className="text-sm flex flex-col justify-center items-center gap-2 min-w-[300px]">
             <p>Thời gian: 90 Phút</p>
             <p>Điểm đạt: 80</p>
             <p>Từ vựng: 語彙 (40 分)</p>

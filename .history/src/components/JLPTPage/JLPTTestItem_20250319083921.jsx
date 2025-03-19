@@ -2,7 +2,7 @@ import React from "react";
 
 const JLPTTestItem = ({ test, index, onStart }) => {
   return (
-    <div className="flex justify-between items-center p-4 rounded-lg shadow-lg bg-white">
+    <div className="flex justify-between items-center p-4  rounded-lg shadow-sm bg-white">
       <span className="text-lg font-semibold">
         Test {index}: {test.topic} - {test.level}
       </span>
