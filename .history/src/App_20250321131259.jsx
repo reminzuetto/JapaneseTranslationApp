@@ -10,7 +10,6 @@ import TranslatePage from "./pages/TranslatePage";
 import CollectionPage from "./pages/CollectionPage";
 import JLPTPage from "./pages/JLPTPage";
 import AboutPage from "./pages/AboutPage";
-import CollectionInfoPage from "./pages/CollectionInfoPage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
