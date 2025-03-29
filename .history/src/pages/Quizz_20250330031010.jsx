@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 
 const Quizz = () => {
@@ -57,17 +57,15 @@ const Quizz = () => {
   }
 
   return (
-    <div className="flex flex-col items-center p-8">
-      <h1 className="text-5xl font-medium italic text-zinc-700 mb-6">Quizz</h1>
+    <div className="flex flex-col items-center p-6">
+      <h1 className="text-2xl font-bold mb-4">Quizz</h1>
       {finished ? (
         <p className="text-xl font-bold text-green-500">Finished</p>
       ) : (
         <>
-          <p className=" text-2xl italic text-gray-800">
+          <p className="text-lg font-semibold">{words[currentIndex].word}</p>
+          <p className="text-md text-gray-600">
             Câu {currentIndex + 1} / {words.length}
-          </p>
-          <p className="text-5xl text-blue-500 font-semibold p-8">
-            {words[currentIndex].word}
           </p>
         </>
       )}
@@ -76,7 +74,7 @@ const Quizz = () => {
           shuffledOptions.map((option, index) => (
             <button
               key={index}
-              className={`px-40 py-5 rounded-lg text-white transition ${
+              className={`px-4 py-2 rounded-lg text-white transition ${
                 selectedAnswer === option
                   ? option === words[currentIndex].pronounce
                     ? "bg-green-500"
@@ -90,12 +88,12 @@ const Quizz = () => {
             </button>
           ))}
       </div>
-      <p className="mt-4 italic text-xl text-gray-600">
+      <p className="mt-4 text-lg">
         Điểm: {score} / {words.length}
       </p>
       <div className="mt-4 flex gap-4">
         <button
-          className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600 transition"
+          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
           onClick={() => navigate(`/collection/${id}`)}
         >
           Return

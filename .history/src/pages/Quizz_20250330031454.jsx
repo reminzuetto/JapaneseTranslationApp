@@ -76,7 +76,7 @@ const Quizz = () => {
           shuffledOptions.map((option, index) => (
             <button
               key={index}
-              className={`px-40 py-5 rounded-lg text-white transition ${
+              className={`px-4 py-2 rounded-lg text-white transition ${
                 selectedAnswer === option
                   ? option === words[currentIndex].pronounce
                     ? "bg-green-500"
@@ -95,7 +95,7 @@ const Quizz = () => {
       </p>
       <div className="mt-4 flex gap-4">
         <button
-          className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600 transition"
+          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
           onClick={() => navigate(`/collection/${id}`)}
         >
           Return

@@ -76,7 +76,7 @@ const Quizz = () => {
           shuffledOptions.map((option, index) => (
             <button
               key={index}
-              className={`px-40 py-5 rounded-lg text-white transition ${
+              className={`px-80 py-4 rounded-lg text-white transition ${
                 selectedAnswer === option
                   ? option === words[currentIndex].pronounce
                     ? "bg-green-500"

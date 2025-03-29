@@ -33,7 +33,7 @@ const Flashcard = () => {
 
   return (
     <div className="flex flex-col items-center p-6">
-      <h1 className="text-5xl font-medium italic text-zinc-700 mb-6">
+      <h1 className="text-xl font-medium italic text-zinc-700 mb-6">
         Flashcard
       </h1>
 

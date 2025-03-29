@@ -1,0 +1,150 @@
+{
+  "collections": [
+    {
+      "collectionID": "001",
+      "collectionName": "Trường học",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "学校",
+          "pronounce": "がっこう",
+          "relevants": ["小学校", "中学校"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Trường", "Ngôi Trường", "Mái Trường"],
+              "example_jp": "私は学校へ行きます",
+              "example_vi": "Tôi đi học"
+            }
+          ]
+        },
+        {
+          "word": "先生",
+          "pronounce": "せんせい",
+          "relevants": ["教師", "講師"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Giáo viên", "Thầy cô"],
+              "example_jp": "先生に質問しました",
+              "example_vi": "Tôi đã hỏi thầy cô một câu hỏi"
+            }
+          ]
+        },
+        {
+          "word": "学生",
+          "pronounce": "がくせい",
+          "relevants": ["生徒", "大学生"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Học sinh", "Sinh viên"],
+              "example_jp": "彼は大学の学生です",
+              "example_vi": "Anh ấy là sinh viên đại học"
+            }
+          ]
+        },
+        {
+          "word": "教室",
+          "pronounce": "きょうしつ",
+          "relevants": ["講堂", "図書室"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Phòng học", "Lớp học"],
+              "example_jp": "教室で勉強します",
+              "example_vi": "Tôi học trong lớp học"
+            }
+          ]
+        },
+        {
+          "word": "試験",
+          "pronounce": "しけん",
+          "relevants": ["テスト", "入学試験"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Kỳ thi", "Bài kiểm tra"],
+              "example_jp": "試験が難しかったです",
+              "example_vi": "Kỳ thi rất khó"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "002",
+      "collectionName": "Gia đình",
+      "createdDate": "2025-03-17",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "父",
+          "pronounce": "ちち",
+          "relevants": ["お父さん", "パパ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Bố", "Cha"],
+              "example_jp": "私の父は医者です",
+              "example_vi": "Bố tôi là bác sĩ"
+            }
+          ]
+        },
+        {
+          "word": "母",
+          "pronounce": "はは",
+          "relevants": ["お母さん", "ママ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mẹ", "Má"],
+              "example_jp": "母は料理が上手です",
+              "example_vi": "Mẹ tôi nấu ăn rất giỏi"
+            }
+          ]
+        },
+        {
+          "word": "兄弟",
+          "pronounce": "きょうだい",
+          "relevants": ["姉妹", "兄", "弟"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Anh chị em"],
+              "example_jp": "私は三人の兄弟がいます",
+              "example_vi": "Tôi có ba anh chị em"
+            }
+          ]
+        },
+        {
+          "word": "祖父",
+          "pronounce": "そふ",
+          "relevants": ["おじいさん", "祖母"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Ông nội", "Ông ngoại"],
+              "example_jp": "祖父は元気です",
+              "example_vi": "Ông tôi vẫn khỏe"
+            }
+          ]
+        },
+        {
+          "word": "姉",
+          "pronounce": "あね",
+          "relevants": ["お姉さん", "妹"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chị gái"],
+              "example_jp": "姉は大学生です",
+              "example_vi": "Chị tôi là sinh viên đại học"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
