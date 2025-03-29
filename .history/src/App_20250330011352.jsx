@@ -11,8 +11,6 @@ import CollectionPage from "./pages/CollectionPage";
 import JLPTPage from "./pages/JLPTPage";
 import AboutPage from "./pages/AboutPage";
 import CollectionInfoPage from "./pages/CollectionInfoPage";
-import Flashcard from "./pages/FlashCard";
-import Quizz from "./pages/Quizz";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,8 +39,6 @@ function App() {
             <Route path="/jlpt" element={<JLPTPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/collection/:id" element={<CollectionInfoPage />} />
-            <Route path="/flashcard/:id" element={<Flashcard />} />
-            <Route path="/quizz/:id" element={<Quizz />} />
           </Routes>
         </div>
       </div>

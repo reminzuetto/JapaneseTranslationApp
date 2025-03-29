@@ -42,7 +42,6 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/collection/:id" element={<CollectionInfoPage />} />
             <Route path="/flashcard/:id" element={<Flashcard />} />
-            <Route path="/quizz/:id" element={<Quizz />} />
           </Routes>
         </div>
       </div>
