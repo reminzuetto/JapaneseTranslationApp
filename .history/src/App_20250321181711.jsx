@@ -21,7 +21,7 @@ function App() {
       <div className="flex">
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-        {/* <RightSideBar> </RightSideBar> */}
+        <RightSideBar> </RightSideBar>
 
         {/* Nội dung chính */}
         <div

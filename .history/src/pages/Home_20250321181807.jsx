@@ -5,7 +5,7 @@ import SearchInput from "../components/SeachBar/SearchInput";
 
 const Home = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 mr-[100px]">
       <SearchBar></SearchBar>
     </div>
   );

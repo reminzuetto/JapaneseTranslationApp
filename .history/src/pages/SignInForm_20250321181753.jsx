@@ -28,7 +28,7 @@ const providers = [
 
 const SignInForm = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen mr-[100px]">
       <h1 className="text-blue-600 font-bold text-4xl">Sign in with</h1>
 
       <div className="flex justify-between gap-4 mt-8">

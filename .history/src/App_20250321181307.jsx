@@ -11,17 +11,15 @@ import CollectionPage from "./pages/CollectionPage";
 import JLPTPage from "./pages/JLPTPage";
 import AboutPage from "./pages/AboutPage";
 import CollectionInfoPage from "./pages/CollectionInfoPage";
-import RightSideBar from "./RightSideBar/RightSideBar";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <Router>
-      <div className="flex">
+      <div className="flex mr-[100px]">
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-        {/* <RightSideBar> </RightSideBar> */}
 
         {/* Nội dung chính */}
         <div

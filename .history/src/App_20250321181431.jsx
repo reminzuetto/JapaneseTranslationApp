@@ -18,10 +18,10 @@ function App() {
 
   return (
     <Router>
-      <div className="flex">
+      <div className="flex mr-[100px]">
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
-        {/* <RightSideBar> </RightSideBar> */}
+        <RightSideBar> </RightSideBar>
 
         {/* Nội dung chính */}
         <div

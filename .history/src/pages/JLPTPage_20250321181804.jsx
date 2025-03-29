@@ -17,7 +17,7 @@ const JLPTPage = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen ">
+    <div className="p-4 bg-gray-100 min-h-screen mr-[100px]">
       <div className="flex justify-between space-x-4 mb-4">
         <div className="flex justify-start m-2 p-2 gap-2 rounded-3xl  shadow-lg">
           <button className="px-4 py-2 bg-yellow-400 text-white font-bold rounded-3xl cursor-pointer">
