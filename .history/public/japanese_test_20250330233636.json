@@ -1,0 +1,109 @@
+{
+  "tests": [
+    {
+      "id": "001",
+      "topic": "Trường học",
+      "level": "N2",
+      "questions": [
+        {
+          "question_id": 1,
+          "question": "Từ '学校' có nghĩa là gì?",
+          "answers": ["Trường học", "Giáo viên", "Sách", "Nhà"],
+          "correct_answer": "A",
+          "explain": "学校 (gakkou) là danh từ tiếng Nhật nghĩa là 'trường học'."
+        },
+        {
+          "question_id": 2,
+          "question": "Từ '先生' có nghĩa là gì?",
+          "answers": ["Học sinh", "Giáo viên", "Bác sĩ", "Cảnh sát"],
+          "correct_answer": "B",
+          "explain": "先生 (sensei) có nghĩa là 'giáo viên' hoặc 'thầy cô'."
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "topic": "Gia đình",
+      "level": "N4",
+      "questions": [
+        {
+          "question_id": 1,
+          "question": "Từ '父' có nghĩa là gì?",
+          "answers": ["Anh trai", "Bố", "Chú", "Bạn"],
+          "correct_answer": "B",
+          "explain": "父 (chichi) là cách gọi 'bố' trong tiếng Nhật."
+        },
+        {
+          "question_id": 2,
+          "question": "Từ '母' có nghĩa là gì?",
+          "answers": ["Mẹ", "Chị gái", "Dì", "Cô giáo"],
+          "correct_answer": "A",
+          "explain": "母 (haha) có nghĩa là 'mẹ' trong tiếng Nhật."
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "topic": "Động vật",
+      "level": "N5",
+      "questions": [
+        {
+          "question_id": 1,
+          "question": "Từ '猫' có nghĩa là gì?",
+          "answers": ["Chó", "Mèo", "Chuột", "Bò"],
+          "correct_answer": "B",
+          "explain": "猫 (neko) có nghĩa là 'mèo' trong tiếng Nhật."
+        },
+        {
+          "question_id": 2,
+          "question": "Từ '犬' có nghĩa là gì?",
+          "answers": ["Chó", "Mèo", "Cá", "Thỏ"],
+          "correct_answer": "A",
+          "explain": "犬 (inu) có nghĩa là 'chó' trong tiếng Nhật."
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "topic": "Món ăn",
+      "level": "N3",
+      "questions": [
+        {
+          "question_id": 1,
+          "question": "Từ '寿司' có nghĩa là gì?",
+          "answers": ["Mì", "Cơm cuộn", "Sushi", "Bánh"],
+          "correct_answer": "C",
+          "explain": "寿司 (sushi) là một món ăn truyền thống của Nhật Bản."
+        },
+        {
+          "question_id": 2,
+          "question": "Từ 'ラーメン' có nghĩa là gì?",
+          "answers": ["Mì Ramen", "Bánh mì", "Bánh ngọt", "Cơm nắm"],
+          "correct_answer": "A",
+          "explain": "ラーメン (ramen) là món mì nổi tiếng của Nhật Bản."
+        }
+      ]
+    },
+    {
+      "id": "005",
+      "topic": "Thời tiết",
+      "level": "N5",
+      "questions": [
+        {
+          "question_id": 1,
+          "question": "Từ '雨' có nghĩa là gì?",
+          "answers": ["Nắng", "Mưa", "Gió", "Tuyết"],
+          "correct_answer": "B",
+          "explain": "雨 (ame) có nghĩa là 'mưa' trong tiếng Nhật."
+        },
+        {
+          "question_id": 2,
+          "question": "Từ '雪' có nghĩa là gì?",
+          "answers": ["Mưa", "Tuyết", "Gió", "Sấm"],
+          "correct_answer": "B",
+          "explain": "雪 (yuki) có nghĩa là 'tuyết' trong tiếng Nhật."
+        }
+      ]
+    }
+  ]
+}

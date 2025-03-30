@@ -3,18 +3,13 @@ import JLPTTestItem from "/src/components/JLPTPage/JLPTTestItem";
 
 const JLPTPage = () => {
   const [tests, setTests] = useState([]);
-  const [level, setLevel] = useState("N5"); // Mặc định là N5
 
   useEffect(() => {
     fetch("japanese_test.json") // Để file json trong thư mục public
       .then((response) => response.json())
-      .then((data) => {
-        if (data.tests) {
-          setTests(data.tests.filter((test) => test.level === level));
-        }
-      })
+      .then((data) => setTests(data.tests))
       .catch((error) => console.error("Error loading test data:", error));
-  }, [level]);
+  }, []);
 
   const handleStartTest = (testId) => {
     console.log(`Bắt đầu bài kiểm tra với ID: ${testId}`);
@@ -24,7 +19,7 @@ const JLPTPage = () => {
   return (
     <div className="p-4 bg-gray-100 min-h-screen ">
       <div className="flex justify-between space-x-4 mb-4">
-        <div className="flex justify-start m-2 p-2 gap-2 rounded-3xl shadow-lg">
+        <div className="flex justify-start m-2 p-2 gap-2 rounded-3xl  shadow-lg">
           <button className="px-4 py-2 bg-yellow-400 text-white font-bold rounded-3xl cursor-pointer">
             JLPT
           </button>
@@ -33,19 +28,21 @@ const JLPTPage = () => {
           </button>
         </div>
         <div className="flex justify-end gap-4 p-4">
-          {["N5", "N4", "N3", "N2", "N1"].map((nLevel) => (
-            <button
-              key={nLevel}
-              className={`text-white p-2 rounded-lg cursor-pointer ${
-                level === nLevel
-                  ? "bg-blue-500"
-                  : "bg-blue-200 hover:bg-blue-500"
-              }`}
-              onClick={() => setLevel(nLevel)}
-            >
-              {nLevel}
-            </button>
-          ))}
+          <button className=" text-white bg-blue-200 p-2 rounded-lg hover:bg-blue-500 cursor-pointer">
+            N5
+          </button>
+          <button className=" text-white bg-blue-200 p-2 rounded-lg hover:bg-blue-500 cursor-pointer">
+            N4
+          </button>
+          <button className=" text-white bg-blue-200 p-2 rounded-lg hover:bg-blue-500 cursor-pointer">
+            N3
+          </button>
+          <button className=" text-white bg-blue-200 p-2 rounded-lg hover:bg-blue-500 cursor-pointer">
+            N2
+          </button>
+          <button className=" text-white bg-blue-200 p-2 rounded-lg hover:bg-blue-500 cursor-pointer">
+            N1
+          </button>
         </div>
       </div>
       <div className="flex">
@@ -61,25 +58,14 @@ const JLPTPage = () => {
         </div>
         <div className="flex flex-col justify-center items-center bg-white p-4 rounded gap-2 italic">
           <h2 className="text-lg font-bold text-blue-500 underline">
-            Thông tin bài thi {level}
+            Thông tin bài thi N5
           </h2>
           <div className="text-sm flex flex-col justify-center items-center gap-2 min-w-[250px]">
-            <p>
-              Thời gian:{" "}
-              {level === "N5"
-                ? "90 Phút"
-                : level === "N4"
-                ? "105 Phút"
-                : "120 Phút"}
-            </p>
-            <p>
-              Điểm đạt: {level === "N5" ? "80" : level === "N4" ? "90" : "100"}
-            </p>
-            <p>Từ vựng: 語彙 ({level === "N5" ? "40 分" : "50 分"})</p>
-            <p>
-              Ngữ pháp - Đọc hiểu: 文法 ({level === "N5" ? "80 分" : "100 分"})
-            </p>
-            <p>Thi nghe: 聞く ({level === "N5" ? "60 分" : "70 分"})</p>
+            <p>Thời gian: 90 Phút</p>
+            <p>Điểm đạt: 80</p>
+            <p>Từ vựng: 語彙 (40 分)</p>
+            <p>Ngữ pháp - Đọc hiểu: 文法 (80 分)</p>
+            <p>Thi nghe: 聞く (60 分)</p>
           </div>
         </div>
       </div>

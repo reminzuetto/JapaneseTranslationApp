@@ -57,10 +57,10 @@ const AboutPage = () => (
         </p>
         <div className="mt-4">
           <a
-            href="https://www.instagram.com/duyetleminh2004/"
+            href="mailto:contact@japanesestudyapp.com"
             className="text-blue-500 hover:underline"
           >
-            Instagram: @duyetleminh2004
+            contact@japanesestudyapp.com
           </a>
         </div>
       </section>

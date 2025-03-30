@@ -24,7 +24,7 @@ const AboutPage = () => (
         <div className="mt-4 flex items-center space-x-4">
           <div className="w-16 h-16 rounded-full">
             <img
-              src="/src/assets/Yuuto-sama.png"
+              src="/src/assets/JLPTIcon.png"
               alt="Developer Avatar"
               className="w-full h-full rounded-full object-cover"
             />
@@ -57,10 +57,10 @@ const AboutPage = () => (
         </p>
         <div className="mt-4">
           <a
-            href="https://www.instagram.com/duyetleminh2004/"
+            href="mailto:contact@japanesestudyapp.com"
             className="text-blue-500 hover:underline"
           >
-            Instagram: @duyetleminh2004
+            contact@japanesestudyapp.com
           </a>
         </div>
       </section>

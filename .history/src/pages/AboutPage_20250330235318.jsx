@@ -22,13 +22,7 @@ const AboutPage = () => (
           Meet the Developer
         </h2>
         <div className="mt-4 flex items-center space-x-4">
-          <div className="w-16 h-16 rounded-full">
-            <img
-              src="/src/assets/Yuuto-sama.png"
-              alt="Developer Avatar"
-              className="w-full h-full rounded-full object-cover"
-            />
-          </div>
+          <div className="w-16 h-16 bg-blue-300 rounded-full"></div>
           <div>
             <h3 className="text-xl font-semibold text-gray-800">Yuuto-sama</h3>
             <p className="text-gray-600">
@@ -57,10 +51,10 @@ const AboutPage = () => (
         </p>
         <div className="mt-4">
           <a
-            href="https://www.instagram.com/duyetleminh2004/"
+            href="mailto:contact@japanesestudyapp.com"
             className="text-blue-500 hover:underline"
           >
-            Instagram: @duyetleminh2004
+            contact@japanesestudyapp.com
           </a>
         </div>
       </section>

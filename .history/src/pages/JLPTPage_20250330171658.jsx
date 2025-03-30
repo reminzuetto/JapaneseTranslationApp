@@ -9,8 +9,8 @@ const JLPTPage = () => {
     fetch("japanese_test.json") // Để file json trong thư mục public
       .then((response) => response.json())
       .then((data) => {
-        if (data.tests) {
-          setTests(data.tests.filter((test) => test.level === level));
+        if (data[level]) {
+          setTests(data[level]);
         }
       })
       .catch((error) => console.error("Error loading test data:", error));

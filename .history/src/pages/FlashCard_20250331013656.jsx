@@ -47,7 +47,7 @@ const Flashcard = () => {
         </button>
         {/* Thẻ chứa hiệu ứng flip */}
         <div
-          className="relative w-120 h-80 perspective-1000 cursor-pointer shadow-lg rounded-xl"
+          className="relative w-120 h-80 perspective-1000 cursor-pointer shadow-lg "
           onClick={() => setFlipped(!flipped)}
         >
           <div
