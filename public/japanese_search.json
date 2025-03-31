@@ -1,0 +1,74 @@
+{
+  "vocabulary": [
+    {
+      "word": "学校",
+      "pronounce": "がっこう",
+      "meanings": ["Trường học", "Ngôi trường"],
+      "relevants": ["小学校", "中学校"],
+      "word_uses": [
+        {
+          "word_type": "Noun",
+          "word_means": ["Trường", "Ngôi Trường", "Mái Trường"],
+          "example_jp": "私は学校へ行きます",
+          "example_vi": "Tôi đi học"
+        }
+      ]
+    },
+    {
+      "word": "先生",
+      "pronounce": "せんせい",
+      "meanings": ["Giáo viên", "Thầy cô giáo"],
+      "relevants": ["教師", "講師"],
+      "word_uses": [
+        {
+          "word_type": "Noun",
+          "word_means": ["Giáo viên", "Thầy cô"],
+          "example_jp": "先生に質問しました",
+          "example_vi": "Tôi đã hỏi thầy cô một câu hỏi"
+        }
+      ]
+    },
+    {
+      "word": "学生",
+      "pronounce": "がくせい",
+      "meanings": ["Sinh viên", "Học sinh"],
+      "relevants": ["生徒", "大学生"],
+      "word_uses": [
+        {
+          "word_type": "Noun",
+          "word_means": ["Học sinh", "Sinh viên"],
+          "example_jp": "彼は大学の学生です",
+          "example_vi": "Anh ấy là sinh viên đại học"
+        }
+      ]
+    },
+    {
+      "word": "教室",
+      "pronounce": "きょうしつ",
+      "meanings": ["Phòng học", "Lớp học"],
+      "relevants": ["講堂", "図書室"],
+      "word_uses": [
+        {
+          "word_type": "Noun",
+          "word_means": ["Phòng học", "Lớp học"],
+          "example_jp": "教室で勉強します",
+          "example_vi": "Tôi học trong lớp học"
+        }
+      ]
+    },
+    {
+      "word": "試験",
+      "pronounce": "しけん",
+      "meanings": ["Kỳ thi", "Bài kiểm tra"],
+      "relevants": ["テスト", "入学試験"],
+      "word_uses": [
+        {
+          "word_type": "Noun",
+          "word_means": ["Kỳ thi", "Bài kiểm tra"],
+          "example_jp": "試験が難しかったです",
+          "example_vi": "Kỳ thi rất khó"
+        }
+      ]
+    }
+  ]
+}

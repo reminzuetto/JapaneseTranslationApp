@@ -1,0 +1,44 @@
+{
+  "vocabulary": [
+    {
+      "word": "学校",
+      "pronounce": "がっこう",
+      "meanings": ["Trường học", "Ngôi trường"]
+    },
+    {
+      "word": "小学校",
+      "pronounce": "しょうがっこう",
+      "meanings": ["Trường tiểu học"]
+    },
+    {
+      "word": "中学校",
+      "pronounce": "ちゅうがっこう",
+      "meanings": ["Trường trung học cơ sở"]
+    },
+    {
+      "word": "高校",
+      "pronounce": "こうこう",
+      "meanings": ["Trường trung học phổ thông"]
+    },
+    {
+      "word": "大学",
+      "pronounce": "だいがく",
+      "meanings": ["Trường đại học"]
+    },
+    {
+      "word": "教師",
+      "pronounce": "きょうし",
+      "meanings": ["Giáo viên", "Thầy cô giáo"]
+    },
+    {
+      "word": "生徒",
+      "pronounce": "せいと",
+      "meanings": ["Học sinh"]
+    },
+    {
+      "word": "学生",
+      "pronounce": "がくせい",
+      "meanings": ["Sinh viên"]
+    }
+  ]
+}
