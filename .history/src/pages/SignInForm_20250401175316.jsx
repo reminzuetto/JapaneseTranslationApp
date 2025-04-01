@@ -6,9 +6,7 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
   FacebookAuthProvider,
-} from "/src/config/Firebase.jsx";
-import { useState } from "react";
-import axios from "axios";
+} from "/src/Firebase.jsx";
 
 const providers = [
   {
@@ -29,27 +27,6 @@ const providers = [
 ];
 
 const SignInForm = () => {
-  const [user, setUser] = useState(null);
-
-  const handleSignIn = async (values, actions) => {
-    try {
-      // Gửi yêu cầu đăng nhập đến backend
-      const response = await axios.post("/api/login", {
-        email: values.emailAddress,
-        password: values.password,
-      });
-
-      // Nếu đăng nhập thành công, lưu thông tin người dùng vào state
-      if (response.status === 200) {
-        setUser(response.data); // Lưu thông tin người dùng, ví dụ: { avatar, username }
-      }
-      actions.setSubmitting(false);
-    } catch (error) {
-      console.error("Login error:", error);
-      actions.setSubmitting(false);
-    }
-  };
-
   return (
     <div className="flex flex-col justify-center items-center h-screen ">
       <h1 className="text-blue-600 font-bold text-4xl">Sign in with</h1>
@@ -82,7 +59,13 @@ const SignInForm = () => {
             .min(8, "Password must be at least 8 characters long")
             .required("Password is required"),
         })}
-        onSubmit={handleSignIn}
+        onSubmit={(values, actions) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            actions.resetForm();
+            actions.setSubmitting(false);
+          }, 1000);
+        }}
       >
         {({ isSubmitting }) => (
           <Form className="p-4 w-full max-w-[600px] mx-auto" autoComplete="off">
@@ -96,6 +79,7 @@ const SignInForm = () => {
               name="password"
               placeholder="Enter your password..."
             />
+
             <div className="text-right">
               <a
                 href="/forgot-password"
@@ -115,17 +99,6 @@ const SignInForm = () => {
           </Form>
         )}
       </Formik>
-
-      {user && (
-        <div className="mt-4 flex items-center gap-4">
-          <img
-            src={user.avatar}
-            alt="User Avatar"
-            className="w-12 h-12 rounded-full"
-          />
-          <span>{user.username}</span>
-        </div>
-      )}
 
       <p className="mt-4">
         Don't have an account?

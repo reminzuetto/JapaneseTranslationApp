@@ -7,8 +7,6 @@ import {
   GithubAuthProvider,
   FacebookAuthProvider,
 } from "/src/config/Firebase.jsx";
-import { useState } from "react";
-import axios from "axios";
 
 const providers = [
   {
@@ -82,7 +80,13 @@ const SignInForm = () => {
             .min(8, "Password must be at least 8 characters long")
             .required("Password is required"),
         })}
-        onSubmit={handleSignIn}
+        onSubmit={(values, actions) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            actions.resetForm();
+            actions.setSubmitting(false);
+          }, 1000);
+        }}
       >
         {({ isSubmitting }) => (
           <Form className="p-4 w-full max-w-[600px] mx-auto" autoComplete="off">
@@ -96,6 +100,7 @@ const SignInForm = () => {
               name="password"
               placeholder="Enter your password..."
             />
+
             <div className="text-right">
               <a
                 href="/forgot-password"
@@ -115,17 +120,6 @@ const SignInForm = () => {
           </Form>
         )}
       </Formik>
-
-      {user && (
-        <div className="mt-4 flex items-center gap-4">
-          <img
-            src={user.avatar}
-            alt="User Avatar"
-            className="w-12 h-12 rounded-full"
-          />
-          <span>{user.username}</span>
-        </div>
-      )}
 
       <p className="mt-4">
         Don't have an account?

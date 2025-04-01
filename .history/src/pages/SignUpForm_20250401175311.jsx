@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
   FacebookAuthProvider,
-} from "/src/config/Firebase.jsx";
+} from "/src/Firebase.jsx";
 
 const providers = [
   {

@@ -1,32 +1,8 @@
 import { Formik, Form, useField } from "formik";
 import PropTypes from "prop-types";
 import * as Yup from "yup";
-import {
-  signInWithProvider,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  FacebookAuthProvider,
-} from "/src/config/Firebase.jsx";
 import { useState } from "react";
 import axios from "axios";
-
-const providers = [
-  {
-    name: "Facebook",
-    icon: "/src/assets/FacebookIcon.png",
-    provider: new FacebookAuthProvider(),
-  },
-  {
-    name: "Github",
-    icon: "/src/assets/GithubIcon.png",
-    provider: new GithubAuthProvider(),
-  },
-  {
-    name: "Google",
-    icon: "/src/assets/GoogleIcon.png",
-    provider: new GoogleAuthProvider(),
-  },
-];
 
 const SignInForm = () => {
   const [user, setUser] = useState(null);
@@ -51,19 +27,11 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
+    <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-blue-600 font-bold text-4xl">Sign in with</h1>
-
+      {/* Giữ lại phần đăng nhập qua các provider */}
       <div className="flex justify-between gap-4 mt-8">
-        {providers.map((p) => (
-          <button
-            key={p.name}
-            className="w-10 h-10 mx-3 cursor-pointer"
-            onClick={() => signInWithProvider(p.provider)}
-          >
-            <img src={p.icon} alt={p.name} />
-          </button>
-        ))}
+        {/* Các provider như Facebook, Google, Github */}
       </div>
 
       <div className="flex items-center mt-8 w-full max-w-[500px]">

@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 import * as Yup from "yup";
 import {
   signInWithProvider,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  FacebookAuthProvider,
-} from "/src/config/Firebase.jsx";
+  googleProvider,
+  facebookProvider,
+  githubProvider,
+} from "/src/config/firebaseConfig.jsx";
 
 const providers = [
   {
     name: "Facebook",
     icon: "/src/assets/FacebookIcon.png",
-    provider: new FacebookAuthProvider(),
+    provider: facebookProvider(),
   },
   {
     name: "Github",
     icon: "/src/assets/GithubIcon.png",
-    provider: new GithubAuthProvider(),
+    provider: githubProvider(),
   },
   {
     name: "Google",
