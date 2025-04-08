@@ -57,23 +57,23 @@ const SignInForm = ({ setUser }) => {
     }
   };
 
-  const handleProviderLogin = async (provider) => {
+  const handleSocialLogin = async (provider) => {
     try {
-      const result = await signInWithProvider(provider);
-      if (!result || !result.user)
-        throw new Error("No user returned from provider");
-
+      const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
+      console.log("User Info:", user);
+
+      // Gửi user về App state (nếu có)
       setUser({
         username: user.displayName,
         email: user.email,
         avatar: user.photoURL,
       });
 
-      navigate("/");
+      navigate("/home"); // hoặc redirect về home page
     } catch (error) {
-      console.error("Social login error:", error);
+      console.error("Google login error:", error);
     }
   };
 
@@ -87,7 +87,7 @@ const SignInForm = ({ setUser }) => {
           <button
             key={p.name}
             className="w-10 h-10 mx-3 cursor-pointer"
-            onClick={() => handleProviderLogin(p.provider)}
+            onClick={() => signInWithProvider(p.provider)}
           >
             <img src={p.icon} alt={p.name} />
           </button>

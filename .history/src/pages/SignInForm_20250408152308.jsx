@@ -71,7 +71,7 @@ const SignInForm = ({ setUser }) => {
         avatar: user.photoURL,
       });
 
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.error("Social login error:", error);
     }

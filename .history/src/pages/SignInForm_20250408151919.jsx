@@ -57,21 +57,21 @@ const SignInForm = ({ setUser }) => {
     }
   };
 
+  // trong SignInForm.jsx
   const handleProviderLogin = async (provider) => {
     try {
       const result = await signInWithProvider(provider);
-      if (!result || !result.user)
-        throw new Error("No user returned from provider");
-
       const user = result.user;
 
+      // Cập nhật state người dùng
       setUser({
         username: user.displayName,
         email: user.email,
         avatar: user.photoURL,
       });
 
-      navigate("/");
+      // Điều hướng đến trang chính
+      navigate("/home");
     } catch (error) {
       console.error("Social login error:", error);
     }
@@ -87,7 +87,7 @@ const SignInForm = ({ setUser }) => {
           <button
             key={p.name}
             className="w-10 h-10 mx-3 cursor-pointer"
-            onClick={() => handleProviderLogin(p.provider)}
+            onClick={() => signInWithProvider(p.provider)}
           >
             <img src={p.icon} alt={p.name} />
           </button>

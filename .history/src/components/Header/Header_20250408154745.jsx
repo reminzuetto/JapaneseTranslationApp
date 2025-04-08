@@ -2,7 +2,23 @@ import React from "react";
 import notificationsData from "/src/Data.js";
 import NotificationItem from "../Header/NotificationItem";
 import { Link } from "react-router-dom";
-import useClickOutside from "/src/hooks/useClickOutside.jsx";
+
+const useClickOutside = (callback) => {
+  const ref = React.useRef();
+
+  React.useEffect(() => {
+    const handleClick = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        callback();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [callback]);
+
+  return ref;
+};
 
 const Header = ({ user, setUser }) => {
   const [showUserDropdown, setShowUserDropdown] = React.useState(false);

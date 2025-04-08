@@ -1,0 +1,442 @@
+{
+  "collections": [
+    {
+      "collectionID": "001",
+      "collectionName": "Trường học",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "学校",
+          "pronounce": "がっこう",
+          "relevants": ["小学校", "中学校"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Trường", "Ngôi Trường", "Mái Trường"],
+              "example_jp": "私は学校へ行きます",
+              "example_vi": "Tôi đi học"
+            }
+          ]
+        },
+        {
+          "word": "先生",
+          "pronounce": "せんせい",
+          "relevants": ["教師", "講師"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Giáo viên", "Thầy cô"],
+              "example_jp": "先生に質問しました",
+              "example_vi": "Tôi đã hỏi thầy cô một câu hỏi"
+            }
+          ]
+        },
+        {
+          "word": "学生",
+          "pronounce": "がくせい",
+          "relevants": ["生徒", "大学生"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Học sinh", "Sinh viên"],
+              "example_jp": "彼は大学の学生です",
+              "example_vi": "Anh ấy là sinh viên đại học"
+            }
+          ]
+        },
+        {
+          "word": "教室",
+          "pronounce": "きょうしつ",
+          "relevants": ["講堂", "図書室"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Phòng học", "Lớp học"],
+              "example_jp": "教室で勉強します",
+              "example_vi": "Tôi học trong lớp học"
+            }
+          ]
+        },
+        {
+          "word": "試験",
+          "pronounce": "しけん",
+          "relevants": ["テスト", "入学試験"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Kỳ thi", "Bài kiểm tra"],
+              "example_jp": "試験が難しかったです",
+              "example_vi": "Kỳ thi rất khó"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "002",
+      "collectionName": "Gia đình",
+      "createdDate": "2025-03-17",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "父",
+          "pronounce": "ちち",
+          "relevants": ["お父さん", "パパ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Bố", "Cha"],
+              "example_jp": "私の父は医者です",
+              "example_vi": "Bố tôi là bác sĩ"
+            }
+          ]
+        },
+        {
+          "word": "母",
+          "pronounce": "はは",
+          "relevants": ["お母さん", "ママ"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mẹ", "Má"],
+              "example_jp": "母は料理が上手です",
+              "example_vi": "Mẹ tôi nấu ăn rất giỏi"
+            }
+          ]
+        },
+        {
+          "word": "兄弟",
+          "pronounce": "きょうだい",
+          "relevants": ["姉妹", "兄", "弟"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Anh chị em"],
+              "example_jp": "私は三人の兄弟がいます",
+              "example_vi": "Tôi có ba anh chị em"
+            }
+          ]
+        },
+        {
+          "word": "祖父",
+          "pronounce": "そふ",
+          "relevants": ["おじいさん", "祖母"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Ông nội", "Ông ngoại"],
+              "example_jp": "祖父は元気です",
+              "example_vi": "Ông tôi vẫn khỏe"
+            }
+          ]
+        },
+        {
+          "word": "姉",
+          "pronounce": "あね",
+          "relevants": ["お姉さん", "妹"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chị gái"],
+              "example_jp": "姉は大学生です",
+              "example_vi": "Chị tôi là sinh viên đại học"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "003",
+      "collectionName": "Cảm xúc",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "嬉しい",
+          "pronounce": "うれしい",
+          "relevants": ["楽しい", "幸せ"],
+          "word_uses": [
+            {
+              "word_type": "Adjective",
+              "word_means": ["Vui", "Hạnh phúc"],
+              "example_jp": "プレゼントをもらって嬉しいです",
+              "example_vi": "Tôi vui vì nhận được quà"
+            }
+          ]
+        },
+        {
+          "word": "悲しい",
+          "pronounce": "かなしい",
+          "relevants": ["寂しい", "辛い"],
+          "word_uses": [
+            {
+              "word_type": "Adjective",
+              "word_means": ["Buồn"],
+              "example_jp": "悲しい映画を見ました",
+              "example_vi": "Tôi đã xem một bộ phim buồn"
+            }
+          ]
+        },
+        {
+          "word": "怒る",
+          "pronounce": "おこる",
+          "relevants": ["腹が立つ", "激怒"],
+          "word_uses": [
+            {
+              "word_type": "Verb",
+              "word_means": ["Tức giận"],
+              "example_jp": "彼は簡単に怒ります",
+              "example_vi": "Anh ấy dễ tức giận"
+            }
+          ]
+        },
+        {
+          "word": "怖い",
+          "pronounce": "こわい",
+          "relevants": ["恐怖", "不安"],
+          "word_uses": [
+            {
+              "word_type": "Adjective",
+              "word_means": ["Sợ", "Đáng sợ"],
+              "example_jp": "怖い話を聞きました",
+              "example_vi": "Tôi đã nghe một câu chuyện đáng sợ"
+            }
+          ]
+        },
+        {
+          "word": "安心",
+          "pronounce": "あんしん",
+          "relevants": ["落ち着く", "平和"],
+          "word_uses": [
+            {
+              "word_type": "Noun/Verb",
+              "word_means": ["Yên tâm", "An tâm"],
+              "example_jp": "家に着いて安心しました",
+              "example_vi": "Tôi cảm thấy yên tâm khi về đến nhà"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "004",
+      "collectionName": "Màu sắc",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "赤",
+          "pronounce": "あか",
+          "relevants": ["紅", "朱色"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Màu đỏ"],
+              "example_jp": "赤い車を買いました",
+              "example_vi": "Tôi đã mua một chiếc xe màu đỏ"
+            }
+          ]
+        },
+        {
+          "word": "青",
+          "pronounce": "あお",
+          "relevants": ["蒼", "紺色"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Màu xanh"],
+              "example_jp": "青い空が綺麗です",
+              "example_vi": "Bầu trời xanh rất đẹp"
+            }
+          ]
+        },
+        {
+          "word": "黄色",
+          "pronounce": "きいろ",
+          "relevants": ["金色", "橙色"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Màu vàng"],
+              "example_jp": "黄色の花が咲いています",
+              "example_vi": "Những bông hoa màu vàng đang nở"
+            }
+          ]
+        },
+        {
+          "word": "緑",
+          "pronounce": "みどり",
+          "relevants": ["草色", "エメラルド"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Màu xanh lá"],
+              "example_jp": "緑の葉が美しいです",
+              "example_vi": "Lá cây màu xanh rất đẹp"
+            }
+          ]
+        },
+        {
+          "word": "黒",
+          "pronounce": "くろ",
+          "relevants": ["暗色", "墨"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Màu đen"],
+              "example_jp": "黒い猫を見ました",
+              "example_vi": "Tôi đã thấy một con mèo đen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "005",
+      "collectionName": "Động vật",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "犬",
+          "pronounce": "いぬ",
+          "relevants": ["子犬", "番犬"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chó"],
+              "example_jp": "私の家には犬がいます",
+              "example_vi": "Nhà tôi có một con chó"
+            }
+          ]
+        },
+        {
+          "word": "猫",
+          "pronounce": "ねこ",
+          "relevants": ["子猫", "野良猫"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Mèo"],
+              "example_jp": "猫はかわいいです",
+              "example_vi": "Mèo rất dễ thương"
+            }
+          ]
+        },
+        {
+          "word": "鳥",
+          "pronounce": "とり",
+          "relevants": ["小鳥", "鶴"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Chim"],
+              "example_jp": "鳥が空を飛んでいます",
+              "example_vi": "Chim đang bay trên trời"
+            }
+          ]
+        },
+        {
+          "word": "魚",
+          "pronounce": "さかな",
+          "relevants": ["金魚", "鯉"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Cá"],
+              "example_jp": "魚を食べるのが好きです",
+              "example_vi": "Tôi thích ăn cá"
+            }
+          ]
+        },
+        {
+          "word": "馬",
+          "pronounce": "うま",
+          "relevants": ["競馬", "野生馬"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Ngựa"],
+              "example_jp": "馬に乗ったことがあります",
+              "example_vi": "Tôi đã từng cưỡi ngựa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "collectionID": "006",
+      "collectionName": "Công việc",
+      "createdDate": "2025-03-18",
+      "wordCount": 5,
+      "words": [
+        {
+          "word": "医者",
+          "pronounce": "いしゃ",
+          "relevants": ["外科医", "内科医"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Bác sĩ"],
+              "example_jp": "医者になりたいです",
+              "example_vi": "Tôi muốn trở thành bác sĩ"
+            }
+          ]
+        },
+        {
+          "word": "教師",
+          "pronounce": "きょうし",
+          "relevants": ["先生", "講師"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Giáo viên"],
+              "example_jp": "彼は高校の教師です",
+              "example_vi": "Anh ấy là giáo viên trung học"
+            }
+          ]
+        },
+        {
+          "word": "警察官",
+          "pronounce": "けいさつかん",
+          "relevants": ["刑事", "巡査"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Cảnh sát"],
+              "example_jp": "警察官は町を守ります",
+              "example_vi": "Cảnh sát bảo vệ thành phố"
+            }
+          ]
+        },
+        {
+          "word": "エンジニア",
+          "pronounce": "えんじにあ",
+          "relevants": ["技術者", "プログラマー"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Kỹ sư"],
+              "example_jp": "彼はエンジニアとして働いています",
+              "example_vi": "Anh ấy làm việc với tư cách là một kỹ sư"
+            }
+          ]
+        },
+        {
+          "word": "料理人",
+          "pronounce": "りょうりにん",
+          "relevants": ["シェフ", "コック"],
+          "word_uses": [
+            {
+              "word_type": "Noun",
+              "word_means": ["Đầu bếp"],
+              "example_jp": "彼は有名な料理人です",
+              "example_vi": "Anh ấy là một đầu bếp nổi tiếng"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

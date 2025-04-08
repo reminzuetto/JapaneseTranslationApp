@@ -1,23 +1,25 @@
 import React from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 import notificationsData from "/src/Data.js";
 import NotificationItem from "../Header/NotificationItem";
 import { Link } from "react-router-dom";
-import useClickOutside from "/src/hooks/useClickOutside.jsx";
 
 const Header = ({ user, setUser }) => {
+  const {
+    show: showUserMenu,
+    setShow: setShowUserMenu,
+    nodeRef: userMenuRef,
+  } = useClickOutside();
+
+  const {
+    show: showNotification,
+    setShow: setShowNotification,
+    nodeRef: notificationRef,
+  } = useClickOutside();
+
   const [showUserDropdown, setShowUserDropdown] = React.useState(false);
   const [showNotifications, setShowNotifications] = React.useState(false);
   const [notifications, setNotifications] = React.useState(notificationsData);
-
-  const userDropdownRef = useClickOutside(() => {
-    setShowUserDropdown(false);
-    setShowNotifications(false);
-  });
-
-  const notiDropdownRef = useClickOutside(() => {
-    setShowUserDropdown(false);
-    setShowNotifications(false);
-  });
 
   const markAsSeen = (id) => {
     setNotifications((prev) =>
@@ -30,7 +32,7 @@ const Header = ({ user, setUser }) => {
       <div className="flex items-center gap-4">
         {/* User */}
         {user ? (
-          <div className="relative" ref={userDropdownRef}>
+          <div className="relative" ref={userMenuRef.nodeRef}>
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => {
@@ -79,12 +81,12 @@ const Header = ({ user, setUser }) => {
         )}
 
         {/* Notifications */}
-        <div className="relative" ref={notiDropdownRef}>
+        <div className="relative" ref={notificationRef.nodeRef}>
           <div
             className="relative p-2 rounded-full bg-blue-200 hover:bg-blue-400 cursor-pointer"
             onClick={() => {
               setShowNotifications(!showNotifications);
-              setShowUserDropdown(false);
+              setShowUserDropdown(false); // đóng user nếu đang mở
             }}
           >
             🔔

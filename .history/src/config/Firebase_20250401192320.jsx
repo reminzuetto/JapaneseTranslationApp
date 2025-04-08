@@ -7,6 +7,8 @@ import {
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
+import { useState } from "react";
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -19,15 +21,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const signInWithProvider = async (provider) => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    console.log("User Info:", result.user);
-    return result; // return về kết quả
-  } catch (error) {
-    console.error("Error:", error);
-    throw error; // throw lỗi ra ngoài để xử lý
-  }
+const signInWithProvider = (provider) => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log("User Info:", result.user);
+      setUser(result.user); // Cập nhật user vào state
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 };
 
 export {

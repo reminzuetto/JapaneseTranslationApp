@@ -19,15 +19,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const signInWithProvider = async (provider) => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    console.log("User Info:", result.user);
-    return result; // return về kết quả
-  } catch (error) {
-    console.error("Error:", error);
-    throw error; // throw lỗi ra ngoài để xử lý
-  }
+const signInWithProvider = (provider) => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log("User Info:", result.user);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 };
 
 export {

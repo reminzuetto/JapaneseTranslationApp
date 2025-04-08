@@ -1,19 +1,3 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./pages/Home";
-import Sidebar from "./components/SideBar/SideBar";
-import SignInForm from "./pages/SignInForm";
-import SignUpForm from "./pages/SignUpForm";
-import SearchPage from "./pages/SearchPage";
-import TranslatePage from "./pages/TranslatePage";
-import CollectionPage from "./pages/CollectionPage";
-import JLPTPage from "./pages/JLPTPage";
-import AboutPage from "./pages/AboutPage";
-import CollectionInfoPage from "./pages/CollectionInfoPage";
-import Flashcard from "./pages/FlashCard";
-import Quizz from "./pages/Quizz";
-
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
@@ -30,9 +14,9 @@ function App() {
             isSidebarOpen ? "ml-64" : "ml-20"
           }`}
         >
-          <Header user={user} setUser={setUser} />
+          <Header user={user} /> {/* Truyền thông tin người dùng vào Header */}
           <Routes>
-            <Route path="/" element={<Home />} />{" "}
+            <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignInForm setUser={setUser} />} />
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />
@@ -49,5 +33,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

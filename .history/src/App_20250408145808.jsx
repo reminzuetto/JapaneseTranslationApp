@@ -32,7 +32,7 @@ function App() {
         >
           <Header user={user} setUser={setUser} />
           <Routes>
-            <Route path="/" element={<Home />} />{" "}
+            <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignInForm setUser={setUser} />} />
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />

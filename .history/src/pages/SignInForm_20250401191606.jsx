@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, useField } from "formik";
 import PropTypes from "prop-types";
@@ -30,7 +30,8 @@ const providers = [
   },
 ];
 
-const SignInForm = ({ setUser }) => {
+const SignInForm = () => {
+  const [user, setUser] = useState(null); // state lưu thông tin người dùng
   const navigate = useNavigate(); // hook dùng để chuyển hướng
   const [loading, setLoading] = useState(false); // state để kiểm tra quá trình đăng nhập
 
@@ -44,9 +45,7 @@ const SignInForm = ({ setUser }) => {
       });
 
       if (response.status === 200) {
-        setUser(response.data);
-        navigate("/home");
-        // Cập nhật thông tin người dùng trong state của App
+        setUser(response.data); // Cập nhật thông tin người dùng trong state của App
         actions.setSubmitting(false);
       }
     } catch (error) {
@@ -57,25 +56,11 @@ const SignInForm = ({ setUser }) => {
     }
   };
 
-  const handleProviderLogin = async (provider) => {
-    try {
-      const result = await signInWithProvider(provider);
-      if (!result || !result.user)
-        throw new Error("No user returned from provider");
-
-      const user = result.user;
-
-      setUser({
-        username: user.displayName,
-        email: user.email,
-        avatar: user.photoURL,
-      });
-
-      navigate("/");
-    } catch (error) {
-      console.error("Social login error:", error);
+  useEffect(() => {
+    if (user) {
+      navigate("/home"); // Điều hướng sang trang HomePage
     }
-  };
+  }, [user, navigate]);
 
   return (
     <div className="flex flex-col justify-center items-center h-screen ">
@@ -87,7 +72,7 @@ const SignInForm = ({ setUser }) => {
           <button
             key={p.name}
             className="w-10 h-10 mx-3 cursor-pointer"
-            onClick={() => handleProviderLogin(p.provider)}
+            onClick={() => signInWithProvider(p.provider)}
           >
             <img src={p.icon} alt={p.name} />
           </button>
@@ -128,7 +113,7 @@ const SignInForm = ({ setUser }) => {
             />
             <div className="text-right">
               <a
-                // href="/forgot-password"
+                href="/forgot-password"
                 className="text-blue-400 font-normal underline"
               >
                 Forgot password?
@@ -145,6 +130,18 @@ const SignInForm = ({ setUser }) => {
           </Form>
         )}
       </Formik>
+
+      {/* Hiển thị thông tin người dùng khi đăng nhập thành công */}
+      {user && (
+        <div className="mt-4 flex items-center gap-4">
+          <img
+            src={user.avatar}
+            alt="User Avatar"
+            className="w-12 h-12 rounded-full"
+          />
+          <span>{user.username}</span>
+        </div>
+      )}
 
       {/* Chuyển sang trang đăng ký nếu chưa có tài khoản */}
       <p className="mt-4">

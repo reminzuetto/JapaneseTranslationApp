@@ -31,9 +31,10 @@ function App() {
           }`}
         >
           <Header user={user} setUser={setUser} />
+          {/* Truyền thông tin người dùng vào Header */}
           <Routes>
-            <Route path="/" element={<Home />} />{" "}
-            <Route path="/signin" element={<SignInForm setUser={setUser} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/signin" element={<SignInForm />} />
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/translate" element={<TranslatePage />} />

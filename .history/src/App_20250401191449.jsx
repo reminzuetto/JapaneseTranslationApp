@@ -30,9 +30,9 @@ function App() {
             isSidebarOpen ? "ml-64" : "ml-20"
           }`}
         >
-          <Header user={user} setUser={setUser} />
+          <Header user={user} /> {/* Truyền thông tin người dùng vào Header */}
           <Routes>
-            <Route path="/" element={<Home />} />{" "}
+            <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignInForm setUser={setUser} />} />
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />

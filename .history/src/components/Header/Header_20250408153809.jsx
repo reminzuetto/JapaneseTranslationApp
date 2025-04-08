@@ -1,23 +1,16 @@
 import React from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 import notificationsData from "/src/Data.js";
 import NotificationItem from "../Header/NotificationItem";
 import { Link } from "react-router-dom";
-import useClickOutside from "/src/hooks/useClickOutside.jsx";
 
 const Header = ({ user, setUser }) => {
+  const userDropdownRef = useClickOutside();
+  const notiDropdownRef = useClickOutside();
+
   const [showUserDropdown, setShowUserDropdown] = React.useState(false);
   const [showNotifications, setShowNotifications] = React.useState(false);
   const [notifications, setNotifications] = React.useState(notificationsData);
-
-  const userDropdownRef = useClickOutside(() => {
-    setShowUserDropdown(false);
-    setShowNotifications(false);
-  });
-
-  const notiDropdownRef = useClickOutside(() => {
-    setShowUserDropdown(false);
-    setShowNotifications(false);
-  });
 
   const markAsSeen = (id) => {
     setNotifications((prev) =>
@@ -30,16 +23,20 @@ const Header = ({ user, setUser }) => {
       <div className="flex items-center gap-4">
         {/* User */}
         {user ? (
-          <div className="relative" ref={userDropdownRef}>
+          <div className="relative" ref={userDropdownRef.nodeRef}>
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => {
                 setShowUserDropdown(!showUserDropdown);
-                setShowNotifications(false);
+                setShowNotifications(false); // đóng noti nếu đang mở
               }}
             >
               <img
-                src={user?.avatar || "/src/assets/avatarDefaultPicture.png"}
+                src={
+                  user?.avatar ||
+                  user?.photoURL ||
+                  "/src/assets/avatarDefaultPicture.png"
+                }
                 alt="User Avatar"
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -79,12 +76,12 @@ const Header = ({ user, setUser }) => {
         )}
 
         {/* Notifications */}
-        <div className="relative" ref={notiDropdownRef}>
+        <div className="relative" ref={notiDropdownRef.nodeRef}>
           <div
             className="relative p-2 rounded-full bg-blue-200 hover:bg-blue-400 cursor-pointer"
             onClick={() => {
               setShowNotifications(!showNotifications);
-              setShowUserDropdown(false);
+              setShowUserDropdown(false); // đóng user nếu đang mở
             }}
           >
             🔔
