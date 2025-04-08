@@ -8,16 +8,20 @@ const Header = ({ user, setUser }) => {
   const [notifications, setNotifications] = React.useState(notificationsData);
 
   const {
+    ref: userDropdownRef,
     show: showUserDropdown,
     setShow: setShowUserDropdown,
-    nodeRef: userDropdownRef,
-  } = useClickOutside(".user-toggle");
+  } = useClickOutside(false, () => {
+    setShowNotifications(false);
+  });
 
   const {
+    ref: notiDropdownRef,
     show: showNotifications,
     setShow: setShowNotifications,
-    nodeRef: notiDropdownRef,
-  } = useClickOutside(".noti-toggle");
+  } = useClickOutside(false, () => {
+    setShowUserDropdown(false);
+  });
 
   const markAsSeen = (id) => {
     setNotifications((prev) =>
@@ -32,7 +36,7 @@ const Header = ({ user, setUser }) => {
         {user ? (
           <div className="relative" ref={userDropdownRef}>
             <div
-              className="user-toggle flex items-center gap-2 cursor-pointer"
+              className="flex items-center gap-2 cursor-pointer"
               onClick={() => {
                 setShowUserDropdown(!showUserDropdown);
                 setShowNotifications(false);
@@ -81,7 +85,7 @@ const Header = ({ user, setUser }) => {
         {/* Notifications */}
         <div className="relative" ref={notiDropdownRef}>
           <div
-            className="noti-toggle relative p-2 rounded-full bg-blue-200 hover:bg-blue-400 cursor-pointer"
+            className="relative p-2 rounded-full bg-blue-200 hover:bg-blue-400 cursor-pointer"
             onClick={() => {
               setShowNotifications(!showNotifications);
               setShowUserDropdown(false);
