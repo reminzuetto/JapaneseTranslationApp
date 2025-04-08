@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 import useClickOutside from "/src/hooks/useClickOutside.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Header = ({ user, setUser }) => {
   const [notifications, setNotifications] = React.useState(notificationsData);
-
-  const navigate = useNavigate();
 
   const {
     show: showUserDropdown,
@@ -55,7 +53,7 @@ const Header = ({ user, setUser }) => {
               <div className="absolute top-full right-0 mt-2 w-48 bg-white border rounded shadow-lg p-2 z-50">
                 <div
                   className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer w-full"
-                  onClick={() => navigate("/profile")}
+                  onClick={() => nagivate("/profile")}
                 >
                   <img
                     src={user.avatar}

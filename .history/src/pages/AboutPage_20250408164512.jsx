@@ -60,7 +60,6 @@ const AboutPage = () => (
             href="https://www.instagram.com/duyetleminh2004/"
             className="text-blue-500 hover:underline"
             target="_blank"
-            rel="noopener noreferrer"
           >
             Instagram: @duyetleminh2004
           </a>

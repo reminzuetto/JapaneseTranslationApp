@@ -14,7 +14,6 @@ import CollectionInfoPage from "./pages/CollectionInfoPage";
 import Flashcard from "./pages/FlashCard";
 import Quizz from "./pages/Quizz";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import ProfilePage from "./pages/UserProfilePage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

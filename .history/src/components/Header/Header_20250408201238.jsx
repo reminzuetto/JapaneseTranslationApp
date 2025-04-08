@@ -5,12 +5,9 @@ import { Link } from "react-router-dom";
 import useClickOutside from "/src/hooks/useClickOutside.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 const Header = ({ user, setUser }) => {
   const [notifications, setNotifications] = React.useState(notificationsData);
-
-  const navigate = useNavigate();
 
   const {
     show: showUserDropdown,
@@ -36,38 +33,31 @@ const Header = ({ user, setUser }) => {
         {/* User */}
         {user ? (
           <div className="relative" ref={userDropdownRef}>
-            <div
-              className="user-toggle flex items-center gap-2 cursor-pointer"
-              onClick={() => {
-                setShowUserDropdown(!showUserDropdown);
-                setShowNotifications(false);
-              }}
-            >
+            <div className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer w-full">
               <img
-                src={user?.avatar || "/src/assets/avatarDefaultPicture.png"}
-                alt="User Avatar"
-                className="w-10 h-10 rounded-full object-cover"
+                src={user.avatar}
+                alt="avatar"
+                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
               />
-              {/* <span>{user.username}</span> */}
+              <div className="min-w-0">
+                <p className="font-medium truncate">{user.username}</p>
+                {/* <p className="text-sm text-gray-500">{user.email}</p> */}
+              </div>
             </div>
 
             {showUserDropdown && (
               <div className="absolute top-full right-0 mt-2 w-48 bg-white border rounded shadow-lg p-2 z-50">
-                <div
-                  className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer w-full"
-                  onClick={() => navigate("/profile")}
-                >
+                <div className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer">
                   <img
                     src={user.avatar}
                     alt="avatar"
-                    className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                    className="w-10 h-10 rounded-full object-cover"
                   />
-                  <div className="min-w-0">
-                    <p className="font-medium truncate">{user.username}</p>
+                  <div>
+                    <p className="font-medium">{user.username}</p>
                     {/* <p className="text-sm text-gray-500">{user.email}</p> */}
                   </div>
                 </div>
-
                 {/* <div className="flex items-end justify-end text-gray-500 mr-2 mb-2 cursor-pointer hover:text-blue-300 rounded-lg">
                   <FontAwesomeIcon icon={faPenToSquare} className="mr-2" />
                   <p className="text-sm mt-2">Edit profile</p>

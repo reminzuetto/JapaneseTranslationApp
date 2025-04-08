@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 import useClickOutside from "/src/hooks/useClickOutside.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ user, setUser }) => {
   const [notifications, setNotifications] = React.useState(notificationsData);
-
-  const navigate = useNavigate();
 
   const {
     show: showUserDropdown,
@@ -53,21 +51,17 @@ const Header = ({ user, setUser }) => {
 
             {showUserDropdown && (
               <div className="absolute top-full right-0 mt-2 w-48 bg-white border rounded shadow-lg p-2 z-50">
-                <div
-                  className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer w-full"
-                  onClick={() => navigate("/profile")}
-                >
+                <div className="flex gap-2 items-center hover:bg-gray-300 rounded-lg p-2 cursor-pointer">
                   <img
                     src={user.avatar}
                     alt="avatar"
-                    className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                    className="w-10 h-10 rounded-full object-cover"
                   />
-                  <div className="min-w-0">
-                    <p className="font-medium truncate">{user.username}</p>
+                  <div>
+                    <p className="font-medium">{user.username}</p>
                     {/* <p className="text-sm text-gray-500">{user.email}</p> */}
                   </div>
                 </div>
-
                 {/* <div className="flex items-end justify-end text-gray-500 mr-2 mb-2 cursor-pointer hover:text-blue-300 rounded-lg">
                   <FontAwesomeIcon icon={faPenToSquare} className="mr-2" />
                   <p className="text-sm mt-2">Edit profile</p>
@@ -77,7 +71,7 @@ const Header = ({ user, setUser }) => {
                     setShowUserDropdown(false);
                     setUser(null);
                   }}
-                  className="text-red-500 hover:underline cursor-pointer rounded-lg gap-2 p-2 mr-auto w-full text-right pr-2"
+                  className="text-red-500 hover:underline cursor-pointer rounded-lg gap-2 p-2 mr-auto w-full text-right"
                 >
                   <FontAwesomeIcon
                     icon={faArrowRightFromBracket}

@@ -14,7 +14,6 @@ import CollectionInfoPage from "./pages/CollectionInfoPage";
 import Flashcard from "./pages/FlashCard";
 import Quizz from "./pages/Quizz";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import ProfilePage from "./pages/UserProfilePage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -46,7 +45,7 @@ function App() {
             <Route path="/flashcard/:id" element={<Flashcard />} />
             <Route path="/quizz/:id" element={<Quizz />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile" element={<div>Profile Page</div>} />
             <Route path="*" element={<div>404 Not Found</div>} />
           </Routes>
         </div>
