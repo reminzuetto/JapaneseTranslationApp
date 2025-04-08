@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FaUser, FaLock, FaEdit, FaPhone, FaFileAlt } from "react-icons/fa";
 
+const user = {
+  avatar: "https://i.pravatar.cc/100",
+  fullName: "Duyet Le Minh",
+  dob: "2002-11-30",
+  level: "N5",
+  country: "Vietnam",
+  email: "duyet@example.com",
+};
+
 const UserProfilePage = ({ user, setUser }) => {
   const [activeTab, setActiveTab] = useState("introduction");
   const [editing, setEditing] = useState(false);
@@ -23,28 +32,20 @@ const UserProfilePage = ({ user, setUser }) => {
     setPasswords({ ...passwords, [e.target.name]: e.target.value });
   };
 
-  const handleSave = () => {
-    setUser(formData);
-    setEditing(false);
-  };
-
   return (
     <div className="flex min-h-screen bg-gray-100 p-6 gap-6">
       {/* Sidebar */}
       <div className="bg-white rounded-xl shadow-md p-4 w-64 flex flex-col items-center gap-2">
         <div className="relative">
           <img
-            src={formData.avatar}
+            src={user.avatar}
             alt="avatar"
             className="w-24 h-24 rounded-full object-cover"
           />
           <FaLock className="absolute bottom-0 right-0 text-white bg-blue-500 rounded-full p-1 text-xl" />
         </div>
-        <h2 className="text-lg font-semibold">{formData.fullName}</h2>
-        <button
-          onClick={() => setEditing(true)}
-          className="text-blue-500 hover:underline flex items-center gap-1"
-        >
+        <h2 className="text-lg font-semibold">{user.fullName}</h2>
+        <button className="text-blue-500 hover:underline flex items-center gap-1">
           <FaEdit /> Edit
         </button>
 
@@ -84,7 +85,6 @@ const UserProfilePage = ({ user, setUser }) => {
               </button>
             </div>
             <div className="space-y-4">
-              {/* Full name */}
               <div className="flex items-center gap-2 text-gray-700">
                 <FaUser />
                 <p>
@@ -101,8 +101,6 @@ const UserProfilePage = ({ user, setUser }) => {
                   )}
                 </p>
               </div>
-
-              {/* Date of birth */}
               <div className="flex items-center gap-2 text-gray-700">
                 <FaFileAlt />
                 <p>
@@ -120,8 +118,6 @@ const UserProfilePage = ({ user, setUser }) => {
                   )}
                 </p>
               </div>
-
-              {/* Level */}
               <div className="flex items-center gap-2 text-gray-700">
                 <FaUser />
                 <p>
@@ -138,8 +134,6 @@ const UserProfilePage = ({ user, setUser }) => {
                   )}
                 </p>
               </div>
-
-              {/* Country */}
               <div className="flex items-center gap-2 text-gray-700">
                 <FaPhone />
                 <p>
@@ -156,18 +150,6 @@ const UserProfilePage = ({ user, setUser }) => {
                   )}
                 </p>
               </div>
-
-              {/* Save button */}
-              {editing && (
-                <div className="text-right pt-4">
-                  <button
-                    onClick={handleSave}
-                    className="bg-green-500 text-white px-4 py-2 rounded-lg"
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         )}
@@ -217,7 +199,7 @@ const UserProfilePage = ({ user, setUser }) => {
           </div>
         )}
 
-        {/* Có thể thêm activities nếu cần */}
+        {/* Bạn có thể thêm phần Activities nếu cần */}
       </div>
     </div>
   );

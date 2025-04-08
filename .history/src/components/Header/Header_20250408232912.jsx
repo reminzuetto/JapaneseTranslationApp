@@ -77,7 +77,6 @@ const Header = ({ user, setUser }) => {
                     setShowUserDropdown(false);
                     setUser(null);
                     localStorage.removeItem("user");
-                    navigate("/signin");
                   }}
                   className="text-red-500 hover:underline cursor-pointer rounded-lg gap-2 p-2 mr-auto w-full text-right pr-2"
                 >
