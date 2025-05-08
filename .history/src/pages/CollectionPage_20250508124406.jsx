@@ -17,6 +17,7 @@ const CollectionPage = ({ user }) => {
     }
   }, [user, navigate]);
 
+  // Load dữ liệu từ file JSON hoặc localStorage khi mở trang
   useEffect(() => {
     const storedCollections = localStorage.getItem("collections");
     if (storedCollections) {

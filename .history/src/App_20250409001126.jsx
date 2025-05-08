@@ -54,10 +54,7 @@ function App() {
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/translate" element={<TranslatePage />} />
-            <Route
-              path="/collection"
-              element={<CollectionPage user={user} />}
-            />
+            <Route path="/collection" element={<CollectionPage />} />
             <Route path="/jlpt" element={<JLPTPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/collection/:id" element={<CollectionInfoPage />} />

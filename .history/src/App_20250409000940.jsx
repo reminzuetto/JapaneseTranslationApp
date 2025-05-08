@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
@@ -20,21 +20,6 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const savedUser = localStorage.getItem("user");
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
-  }, []);
-
-  useEffect(() => {
-    if (user) {
-      localStorage.setItem("user", JSON.stringify(user));
-    } else {
-      localStorage.removeItem("user");
-    }
-  }, [user]);
-
   return (
     <Router>
       <div className="flex">
@@ -54,10 +39,7 @@ function App() {
             <Route path="/signup" element={<SignUpForm />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/translate" element={<TranslatePage />} />
-            <Route
-              path="/collection"
-              element={<CollectionPage user={user} />}
-            />
+            <Route path="/collection" element={<CollectionPage />} />
             <Route path="/jlpt" element={<JLPTPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/collection/:id" element={<CollectionInfoPage />} />
